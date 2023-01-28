@@ -1,2 +1,0 @@
-Ez egy piros fájl.
-Most már ékezetekkel utf-8 kódolással.
