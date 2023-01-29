@@ -9,10 +9,16 @@
 <body>
     <h1 id="greet">Helló!</h1>
     <p id="nap"></p>
+    <a id="link" href="#" target="_blank"></a>
     <script type="text/javascript">
+
+        //változók deklarálása
+
         var d = new Date();
         var time = d.getHours();
         var day;
+        var randnumber = Math.random();
+
         /*var day = d.getDay();
         const days = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"];*/
 
@@ -33,8 +39,7 @@
                 document.getElementById('greet').innerHTML = "Good Night!";
             }
             
-            // dátum napokra írd meg a case-t
-            console.log("Mai nap:" + day);
+            // Switch-case utasítással kiirja az aktuális napot
             switch (d.getDay()) {
                 case 0:
                     day = "Vasárnap";
@@ -60,6 +65,19 @@
             }
 
         document.getElementById("nap").innerHTML = "Ma " + day + " van.";
+        
+        // Ha a véletlenszerű szám 0,5-nél nagyobb akkor a hivatkozás máshová navigál
+
+        if (randnumber >= 0.5) {
+
+            document.getElementById("link").href = "https://www.index.hu";
+            document.getElementById("link").innerHTML = "Index.hu";
+        }
+        else {
+            document.getElementById("link").href = "https://www.w3schools.com";
+            document.getElementById("link").innerHTML = "W3Schools.com";
+        }
+
 
     </script>
 </body>
