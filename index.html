@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladatok</title>
+</head>
+<body>
+    <h1 id="greet">Helló!</h1>
+    <p id="nap"></p>
+    <script type="text/javascript">
+        var d = new Date();
+        var time = d.getHours();
+        var day;
+        /*var day = d.getDay();
+        const days = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"];*/
+
+        if (time < 12) {
+
+                document.getElementById('greet').innerHTML = "Good Morning!";
+
+            } 
+            
+            else if (time > 12 && time <= 16) {
+
+                document.getElementById('greet').innerHTML = "Good Day!"; 
+
+            }
+
+            else if (time > 17) {
+
+                document.getElementById('greet').innerHTML = "Good Night!";
+            }
+            
+            // dátum napokra írd meg a case-t
+            console.log("Mai nap:" + day);
+            switch (d.getDay()) {
+                case 0:
+                    day = "Vasárnap";
+                    break;
+                case 1:
+                    day = "Hétfő";
+                    break;
+                case 2:
+                    day = "Kedd";
+                    break;
+                case 3:
+                    day = "Szerda";
+                    break;
+                case 4:
+                    day = "Csütörtök";
+                    break;
+                case 5:
+                    day = "Péntek";
+                    break;
+                case 6:
+                    day = "Szombat";
+                    break;
+            }
+
+        document.getElementById("nap").innerHTML = "Ma " + day + " van.";
+
+    </script>
+</body>
+</html>
